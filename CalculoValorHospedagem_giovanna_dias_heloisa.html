@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title> Cálculo Valor de Hospedagem </title>
+  <script language="javascript">
+
+
+ /* Um hotel cobra o valor da diária de acordo com o tipo de hospedagem
+ (1 - alta temporada, 2-normal, 3 - feriado)
+Faça um programa em JavaScript que solicite a quantidade de dias de hospedagem(1 até 30) 
+e o tipo de hospedagem
+
+Sendo que:
+  Tipo de hospedagem    valor da diaria
+  1                  188,00
+  2                  135,00
+  3                  195,00
+  Exiba:
+ 
+  Tipo de hospedagem por extenso:
+  Dias de hospedagem:
+  Valor da hospedagem:
+
+  
+   
+  Obs: Fazer as validacoes das entradas. 
+  Desafio: Exibir uma imagem "ganhou um passeio"  quando a quantidade de dias 
+  de hospedagem  for a partir de 20 e o 
+  tipo de hospedagem for alta temporada.
+  
+  */
+  
+  var dias, tipoHospedagem, vlrHospedagem, tpHospedagem;
+   
+   do{
+    dias=parseInt(window.prompt("Digite a quantidade de dias da hospedagem"));
+     if(isNaN(dias) || dias<1 || dias>30){
+      alert("Dígito invalido \n digite um número entre 1 e 30, para representar a quantidade de dias da hospedagem");
+     }
+   }while(isNaN(dias) || dias<1 || dias>30);
+   
+   do{
+    tipoHospedagem=window.prompt("Digite o tipo da hospedagem: "+
+	                                      "\n1- alta temporada \n2- normal \n3- feriado");
+	if(tipoHospedagem=="" || tipoHospedagem==null || tipoHospedagem!='1' && tipoHospedagem!='2' && tipoHospedagem!='3'){
+	  alert("Dígito inválido \nDigite um número entre 1 e 3 para escolher o tipo de hospedagem");
+	 
+	}
+	}while(tipoHospedagem=="" || tipoHospedagem==null || tipoHospedagem!='1' && tipoHospedagem!='2' && tipoHospedagem!='3');
+	
+	if(tipoHospedagem=='1'){
+	  tpHospedagem="Hospedagem tipo alta temporada - R$188,00";
+	  vlrHospedagem=dias*188;
+	} else if(tipoHospedagem=='2'){
+	  tpHospedagem="Hospedagem tipo normal - R$135,00";
+	  vlrHospedagem=dias*135;
+	} else{
+	  tpHospedagem="Hospedagem tipo feriado - R$195,00";
+	  vlrHospedagem=dias*195;
+	}
+	
+	document.write(tpHospedagem+"<br>Quantidade de dias da hospedagem: "+ dias+"<br>Valor da hospedagem: R$"+vlrHospedagem);
+	
+
+	
+  
+  
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+</body>
+</html>
